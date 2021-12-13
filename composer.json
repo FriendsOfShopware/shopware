@@ -1,6 +1,6 @@
 {
     "name": "frosh/shopware",
-    "description": "Production template for running Shopware 6",
+    "description": "A Symfony flex based template for Shopware 6",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -14,6 +14,22 @@
             "Shopware\\Production\\": "src/"
         }
     },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "custom/plugins/*/packages/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "custom/static-plugins/*",
+            "options": {
+                "symlink": true
+            }
+        }
+    ],
     "require": {
         "composer-runtime-api": "^2.0",
         "symfony/flex": "~1",
