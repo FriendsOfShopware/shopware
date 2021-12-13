@@ -1,0 +1,37 @@
+{
+    "name": "frosh/shopware",
+    "description": "Production template for running Shopware 6",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Soner Sayakci",
+            "email": "s.sayakci@shopware.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shopware\\Production\\": "src/"
+        }
+    },
+    "require": {
+        "composer-runtime-api": "^2.0",
+        "symfony/flex": "~1",
+        "shopware/core": "~6.4",
+        "shopware/storefront": "~6.4",
+        "shopware/administration": "~6.4",
+        "shopware/elasticsearch": "~6.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": true,
+            "endpoint": [
+                "https://api.github.com/repos/FriendsOfShopware/recipes/contents/index.json?ref=flex/main"
+            ]
+        }
+    }
+}
